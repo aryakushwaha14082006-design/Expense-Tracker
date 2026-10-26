@@ -1,0 +1,237 @@
+/* Sabhi elements ki default spacing reset karna */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Puri website ka basic design */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header ka design */
+header {
+    background-color: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+/* Main container */
+.container {
+    max-width: 850px;
+    width: 92%;
+    margin: 30px auto;
+}
+
+/* Total balance card */
+.balance {
+    background-color: #1e293b;
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.balance h3 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.balance h2 {
+    font-size: 32px;
+    margin-top: 8px;
+}
+
+/* Income aur expenses cards */
+.summary {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+/* Dono summary cards ka common design */
+.summary-card {
+    flex: 1;
+    background-color: white;
+    padding: 22px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.summary-card p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Income ka colour */
+.income-card p,
+.income-amount {
+    color: #16a34a;
+}
+
+/* Expense ka colour */
+.expense-card p,
+.expense-amount {
+    color: #dc2626;
+}
+
+/* Form aur history sections */
+.form-section,
+.history-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.form-section h2,
+.history-section h2 {
+    margin-bottom: 18px;
+}
+
+/* Form labels */
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+
+/* Input aur select fields */
+input,
+select {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+}
+
+/* Input select karne par */
+input:focus,
+select:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+/* Add transaction button */
+#add-transaction {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Button par mouse le jaane par */
+#add-transaction:hover {
+    background-color: #1d4ed8;
+}
+
+/* Har transaction ka card */
+.transaction-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+/* Transaction ka naam aur type */
+.transaction-info {
+    flex: 1;
+}
+
+.transaction-name {
+    font-weight: bold;
+}
+
+.transaction-type-label {
+    font-size: 13px;
+    color: #64748b;
+    text-transform: capitalize;
+}
+
+/* Transaction amount */
+.transaction-amount {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Delete button */
+.delete-button {
+    padding: 8px 12px;
+    background-color: #dc2626;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Delete button hover */
+.delete-button:hover {
+    background-color: #b91c1c;
+}
+
+/* Jab koi transaction na ho */
+.empty-message {
+    text-align: center;
+    color: #64748b;
+    padding: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+}
+
+/* Mobile screen ke liye responsive design */
+@media (max-width: 600px) {
+
+    /* Summary cards ko ek ke neeche ek dikhana */
+    .summary {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* Cards ki spacing kam karna */
+    .form-section,
+    .history-section {
+        padding: 18px;
+    }
+
+    /* Transaction card ko chhoti screen par fit karna */
+    .transaction-item {
+        flex-wrap: wrap;
+    }
+
+    .transaction-amount {
+        white-space: normal;
+    }
+}
+
